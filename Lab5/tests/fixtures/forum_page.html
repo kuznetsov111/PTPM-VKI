@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang=ru data-theme="auto">
+    <link rel="stylesheet" type="text/css" href="/tango/combined.css?20261108-1747">
+  <head>
+<script>
+(function() {
+  var theme = localStorage.getItem('lor-theme');
+  if (theme === 'dark' || theme === 'light' || theme === 'auto') {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+<link rel="preload" href="/js/lor.js?20261108-1747" as="script">
+
+<link rel="yandex-tableau-widget" href="/manifest.json" />
+<meta name="referrer" content="always">
+
+<script type="text/javascript">
+  /*!
+  * $script.js Async loader & dependency manager
+  * https://github.com/ded/script.js
+  * (c) Dustin Diaz, Jacob Thornton 2011
+  * License: MIT
+  */
+(function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)</script>
+
+<script type="text/javascript">
+  $script('/webjars/jquery/3.7.1/jquery.min.js', 'jquery');
+
+  $script.ready('jquery', function() {
+    $script('/js/lor.js?20261108-1747', 'lorjs');
+    $script('/js/plugins.js?20261108-1747', 'plugins');
+  });
+
+  $script('/js/highlight.min.js?20261108-1747', 'hljs');
+  $script.ready(['jquery', 'hljs'], function() {
+    $(function() {
+      hljs.initHighlighting();
+    });
+  });
+
+  $script('/js/realtime.js?20261108-1747', "realtime");
+
+  $script.ready('lorjs', function() {
+    fixTimezone("Europe/Moscow");
+  });
+</script>
+<title>AMD&#039;s New Desktop Chips Run Faster, Cooler and Quieter Than Ever — Talks — Форум</title>
+<meta property="og:title" content="AMD&#039;s New Desktop Chips Run Faster, Cooler and Quieter Than Ever">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.linux.org.ru/forum/talks/12326457">
+<meta property="article:section" content="Форум: Talks">
+<meta property="article:published_time" content="2016-02-03T18:29:27.966+03:00">
+<meta property="og:image" content="https://www.linux.org.ru/img/good-penguin.png">
+<meta property="og:description" content="Linux.com AMD has garnered a reputation in the PC component world of focusing on throughput over thermals, or power over practicality. That&#39;s been true for some...">
+<meta property="og:tag" content="amd">
+  <link rel="canonical" href="https://www.linux.org.ru/forum/talks/12326457/page1">
+
+<script type="text/javascript">
+  $script.ready('lorjs', function() { initNextPrevKeys(); });
+  </script>
+<link rel="search" title="Search L.O.R." href="/search.jsp">
+<meta name="referrer" content="always">
+
+<base href="https://www.linux.org.ru/">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="initial-scale=1.0">
+</head>
+<body>
+<header id="hd">
+  <div id="topProfile">
+    </div>
+
+  <span id="sitetitle"><a href="/">LINUX.ORG.RU</a></span>
+
+  <nav class="menu">
+    <div id="loginGreating">
+      <div id="regmenu" class="head">
+          <a href="https://www.linux.org.ru/register.jsp">Регистрация</a> -
+          <a id="loginbutton" href="/login.jsp?from=%2fforum%2ftalks%2f12326457%2fpage1">Вход</a></div>
+      </div>
+
+    <ul>
+      <li><a href="/news/">Новости</a></li>
+      <li><a href="/gallery/">Галерея</a></li>
+      <li><a href="/articles/">Статьи</a></li>
+      <li><a href="/forum/">Форум</a></li>
+      <li><a href="/polls/">Опросы</a></li>
+      <li><a href="/tracker">Трекер</a></li>
+      <li><a href="/search.jsp">Поиск</a></li>
+    </ul>
+  </nav>
+</header>
+<div style="clear: both"></div>
+<main id="bd">
+<div class=messages itemscope itemtype="http://schema.org/Article">
+
+<article class=msg id="topic-12326457">
+<header>
+    <div class="msg-top-header">
+
+    <span itemprop="articleSection">
+      <a href="/forum/">Форум</a> —
+      <a href="/forum/talks/">Talks</a>
+      </span>
+    
+      &emsp;
+      </span>
+    </div>
+
+    <h1 itemprop="headline">
+      <a href="/forum/talks/12326457">AMD&#039;s New Desktop Chips Run Faster, Cooler and Quieter Than Ever</a>
+      </h1>
+
+    <p class="tags"><i class="icon-tag"></i>&nbsp;<a class=tag rel=tag href="/tag/amd">amd</a></p></header>
+
+  <div class="msg-container">
+
+  <div class="msg_body">
+    <div class="fav-buttons">
+        <div>
+          <a id="favs_button" href="#" title="В избранное"><i class="icon-star"></i></a><br><span
+             id="favs_count">0</span><br>
+        </div>
+        <div>
+          <a id="memories_button" href="#" title="Отслеживать"><i class="icon-bell"></i></a><br><span
+             id="memories_count">0</span>
+        </div>
+      </div>
+    <div class="msg-text" itemprop="articleBody">
+      <p><a href="https://www.linux.com/news/hardware/desktops/883326-amds-new-desktop-chips-run-faster-cooler-and-quieter-than-ever/">Linux.com</a></p><p>AMD has garnered a reputation in the PC component world of focusing on throughput over thermals, or power over practicality. That's been true for some time, but the chipmaker is looking to turn that around with its latest desktop processors for 2016.</p><p>The company's big ticket item is more of an upgrade to one of the firm's most popular chips: the AMD FX-8370 has now been equipped with a newly-designed cooler called the Wraith. This massive black cooler replaces the chip's current stock cooler.</p><p>Что думаете?</p></div>
+<footer>
+
+<div class="userpic"><img class="photo" src="/photos/130230:-638364540.png" alt="" width=150 height=148 ></div><div class=sign >
+  <s><a rel="author"itemprop="creator" href="/people/IceWindDale/profile">IceWindDale</a></s> <span class="stars">★</span><br>
+  <time data-format="default" datetime="2016-02-03T18:29:27.966212+03:00" itemprop="dateCreated">03.02.16 18:29:27 MSK</time><span class="sign_more">
+  </span>
+</div>
+</footer>
+
+<div class=reply>
+          <ul id="topicMenu">
+            <li><a href="/forum/talks/12326457">Ссылка</a></li>
+          </ul>
+          </div>
+      <div class="reactions zero-reactions">
+  <form class="reactions-form" action="/reactions" method="POST">
+    <input type="hidden" name="csrf" value="5ecb6464-f6f7-415c-bd3b-6a8b9dc17a84">
+<input type="hidden" name="topic" value="12326457">
+    </form>
+</div>
+
+</div>
+</div>
+</article>
+
+<script type="text/javascript">
+  $script.ready('lorjs', function() {
+    initStarPopovers();
+  });
+</script>
+<div class="nav">
+  <div class="scroller-row">
+    <div class="scroller-prev">
+      <a class="scroller-arrow" href="/forum/talks/12325558">←</a>
+        <a class="scroller-title hideon-phone" href="/forum/talks/12325558">
+          Нежная тварь, простите, Microsoft, влезает в Android со всех сторон</a>
+      </div>
+    <div class="scroller-group">
+    </div>
+    <div class="scroller-next">
+      <a class="scroller-title hideon-phone" href="/forum/talks/12326955">
+          Allwinner A80 &amp;&amp; usb 3.0 OTG &amp;&amp; cdc_ncm</a>
+        <a class="scroller-arrow" href="/forum/talks/12326955">→</a>
+      </div>
+  </div>
+  </div><div class="comment" id="comments" style="padding-top: 0.5em">
+
+<div style="text-align: center; margin-top: 0.5em; height: 125px; margin-bottom: 0.5em" id="interpage">
+</div>
+<script type="text/javascript">
+  $script.ready('lorjs', function () {
+    const ads = [
+      {
+        type: 'rimg',
+        img320: '/adv/rent-320x100.png',
+        img728: '/adv/rent-728x90.png',
+        img1000: '/adv/rent-1000x120.png',
+        href: 'https://selectel.ru/services/dedicated/server-stay-in-house/?utm_source=linuxorg&utm_medium=banner&utm_campaign=server-stay-in-house'
+      }
+    ];
+
+    init_interpage_adv(ads);
+  });
+</script>
+
+<div class="nav">
+            &emsp;<a class='page-number' href='/forum/talks/12326457#comments' rel='prev'>←</a>
+    <a class='page-number' href='/forum/talks/12326457#comments'>1</a>
+        <strong class='page-number'>2</strong>
+        <span class='page-number'>→</span></div>
+    <article class="msg" id="comment-12333689">
+  <div class="title">
+      
+        Ответ на:
+        <a href="/forum/talks/12326457?cid=12329848" data-samepage="false">
+            комментарий</a>
+          от Deleted <time data-format="default" datetime="2016-02-04T23:07:21.198591+03:00" >04.02.16 23:07:21 MSK</time></div>
+  <div class="msg-container">
+    <div class="userpic"><img class="photo" src="/photos/12011:-1559535306.jpg" alt="" width=149 height=150 ></div><div class="msg_body message-w-userpic">
+      <div class="msg-text">
+        <p>&#171;Вы скажете: но там же в два раза больше ядер! Так и есть, но не стоит забывать о том, что не все ядра одинаково полезны! Посмотрим что нам скажет Sysmark 2007:&#187;</p><p>...</p><p>&#171;И снова вполне предсказуемый результат. По всем позициям лидирует процессор начального уровня от Intel.&#187;</p><p>ну и кто идиот?</p></div>
+
+      <div class="sign">
+        <s><a itemprop="creator" href="/people/crypt/profile">crypt</a></s> <span class="stars">★★★★★</span><br class="visible-phone"> <span class="hideon-phone">(</span><time data-format="default" datetime="2016-02-06T15:15:58.620747+03:00" >06.02.16 15:15:58 MSK</time><span class="hideon-phone">)</span>
+
+</div>
+
+      <div class="reply">
+          <ul>
+            <li><a href="/forum/talks/12326457?cid=12336017" data-samepage="true">Показать ответ</a></li>
+            <li><a href="/forum/talks/12326457?cid=12333689">Ссылка</a></li>
+          </ul>
+        </div>
+      <div class="reactions zero-reactions">
+  <form class="reactions-form" action="/reactions" method="POST">
+    <input type="hidden" name="csrf" value="5ecb6464-f6f7-415c-bd3b-6a8b9dc17a84">
+<input type="hidden" name="topic" value="12326457">
+    <input type="hidden" name="comment" value="12333689">
+    </form>
+</div>
+
+</div>
+  </div>
+
+</article>
+
+
+<article class="msg" id="comment-12336017">
+  <div class="title">
+      
+        Ответ на:
+        <a href="/forum/talks/12326457?cid=12333689" data-samepage="true">
+            комментарий</a>
+          от crypt <time data-format="default" datetime="2016-02-06T15:15:58.620747+03:00" >06.02.16 15:15:58 MSK</time></div>
+  <div class="msg-container">
+    <div class="userpic"><img class="photo" src="/img/p.gif" alt="" width=1 height=1 ></div><div class="msg_body message-w-userpic">
+      <div class="msg-text">
+        <p>1. ты сравниваешь 2-х и 4-х ядерный процессор, что не корректно<br>
+2. идём сюда <a href="http://www.cpubenchmark.net/compare.php?cmp[]=737&amp;cmp[]=366" rel=nofollow>http://www.cpubenchmark.net/compare.php?cmp[]=737&amp;cmp[]=366</a> и видим, большее количество ядер таки приносит пользу<br></p></div>
+
+      <div class="sign">
+        Deleted<br class="visible-phone"> <span class="hideon-phone">(</span><time data-format="default" datetime="2016-02-07T14:04:09.80986+03:00" >07.02.16 14:04:09 MSK</time><span class="hideon-phone">)</span>
+
+</div>
+
+      <div class="reply">
+          <ul>
+            <li><a href="/forum/talks/12326457?cid=12338799" data-samepage="true">Показать ответ</a></li>
+            <li><a href="/forum/talks/12326457?cid=12336017">Ссылка</a></li>
+          </ul>
+        </div>
+      <div class="reactions zero-reactions">
+  <form class="reactions-form" action="/reactions" method="POST">
+    <input type="hidden" name="csrf" value="5ecb6464-f6f7-415c-bd3b-6a8b9dc17a84">
+<input type="hidden" name="topic" value="12326457">
+    <input type="hidden" name="comment" value="12336017">
+    </form>
+</div>
+
+</div>
+  </div>
+
+</article>
+
+
+<article class="msg" id="comment-12338799">
+  <div class="title">
+      
+        Ответ на:
+        <a href="/forum/talks/12326457?cid=12336017" data-samepage="true">
+            комментарий</a>
+          от Deleted <time data-format="default" datetime="2016-02-07T14:04:09.80986+03:00" >07.02.16 14:04:09 MSK</time></div>
+  <div class="msg-container">
+    <div class="userpic"><img class="photo" src="/photos/12011:-1559535306.jpg" alt="" width=149 height=150 ></div><div class="msg_body message-w-userpic">
+      <div class="msg-text">
+        <p>продолжай утешать себя.</p><p>1. автор ixbt сравнивает процы одной ценовой категории (дешевки), что корректно.</p><p>2. на i3 можно включить ht, будет +2 логических ядра. и хз, что покажет твой тест. кроме того, тепловыделение в твоем тесте отсутствует, а об этом весь топик.</p></div>
+
+      <div class="sign">
+        <s><a itemprop="creator" href="/people/crypt/profile">crypt</a></s> <span class="stars">★★★★★</span><br class="visible-phone"> <span class="hideon-phone">(</span><time data-format="default" datetime="2016-02-08T15:54:51.434804+03:00" >08.02.16 15:54:51 MSK</time><span class="hideon-phone">)</span>
+
+</div>
+
+      <div class="reply">
+          <ul>
+            <li><a href="/forum/talks/12326457?cid=12338896" data-samepage="true">Показать ответ</a></li>
+            <li><a href="/forum/talks/12326457?cid=12338799">Ссылка</a></li>
+          </ul>
+        </div>
+      <div class="reactions zero-reactions">
+  <form class="reactions-form" action="/reactions" method="POST">
+    <input type="hidden" name="csrf" value="5ecb6464-f6f7-415c-bd3b-6a8b9dc17a84">
+<input type="hidden" name="topic" value="12326457">
+    <input type="hidden" name="comment" value="12338799">
+    </form>
+</div>
+
+</div>
+  </div>
+
+</article>
+
+
+<article class="msg" id="comment-12338896">
+  <div class="title">
+      
+        Ответ на:
+        <a href="/forum/talks/12326457?cid=12338799" data-samepage="true">
+            комментарий</a>
+          от crypt <time data-format="default" datetime="2016-02-08T15:54:51.434804+03:00" >08.02.16 15:54:51 MSK</time></div>
+  <div class="msg-container">
+    <div class="userpic"><img class="photo" src="/img/p.gif" alt="" width=1 height=1 ></div><div class="msg_body message-w-userpic">
+      <div class="msg-text">
+        <blockquote><p> 2. на i3 можно включить ht, будет +2 логических ядра. и хз, что покажет твой тест. кроме того, тепловыделение в твоем тесте отсутствует, а об этом весь топик.<br></p></blockquote><p>тоже самое покажет, так как ht включён по умолчанию</p></div>
+
+      <div class="sign">
+        Deleted<br class="visible-phone"> <span class="hideon-phone">(</span><time data-format="default" datetime="2016-02-08T16:35:08.861458+03:00" >08.02.16 16:35:08 MSK</time><span class="hideon-phone">)</span>
+
+</div>
+
+      <div class="reply">
+          <ul>
+            <li><a href="/forum/talks/12326457?cid=12338896">Ссылка</a></li>
+          </ul>
+        </div>
+      <div class="reactions zero-reactions">
+  <form class="reactions-form" action="/reactions" method="POST">
+    <input type="hidden" name="csrf" value="5ecb6464-f6f7-415c-bd3b-6a8b9dc17a84">
+<input type="hidden" name="topic" value="12326457">
+    <input type="hidden" name="comment" value="12338896">
+    </form>
+</div>
+
+</div>
+  </div>
+
+</article>
+
+
+</div>
+
+<div id="realtime" style="display: none"></div>
+
+<div class="infoblock">
+    
+        Вы не можете добавлять комментарии в эту тему: топик перемещен в архив.
+      </div>
+<div class="nav">
+      &emsp;<a class='page-number' href='/forum/talks/12326457#comments' rel='prev'>←</a>
+    <a class='page-number' href='/forum/talks/12326457#comments'>1</a>
+        <strong class='page-number'>2</strong>
+        <span class='page-number'>→</span></div>
+  <div class="nav">
+  <div class="scroller-row">
+    <div class="scroller-prev">
+      <a class="scroller-arrow" href="/forum/talks/12325558">←</a>
+        <a class="scroller-title hideon-phone" href="/forum/talks/12325558">
+          Нежная тварь, простите, Microsoft, влезает в Android со всех сторон</a>
+      </div>
+    <div class="scroller-group">
+      <a title="Форум - Talks"
+         href="/forum/talks/">
+          Talks</a>
+    </div>
+    <div class="scroller-next">
+      <a class="scroller-title hideon-phone" href="/forum/talks/12326955">
+          Allwinner A80 &amp;&amp; usb 3.0 OTG &amp;&amp; cdc_ncm</a>
+        <a class="scroller-arrow" href="/forum/talks/12326955">→</a>
+      </div>
+  </div>
+  </div></div>
+
+<section id="related-topics">
+    <h2>Похожие темы</h2>
+
+    <div id="related-topics-list">
+      <ul>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/11732211">Похоже скоро IT-пузырь снова лопнет</a> (2015)
+            </li>
+          <li>
+              <span class="group-label">Новости</span>
+              <a href="/news/kde/1714410">Linux Desktop 2006: better than ever</a> (2006)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/5197539">2.6.36 DRM</a> (2010)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/9675350">Собираются деньги на разработку открытого GPU</a> (2013)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/4531932">[ОН] Мысль аномимного аналитика с форчана.</a> (2010)
+            </li>
+          </ul>
+      <ul>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/6095634">Fool's Day RFC</a> (2011)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/talks/7566551">Коливас живее всех живых .. :-)</a> (2012)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/linux-hardware/13159862">Не работают сенсоры температуры</a> (2017)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/general/15598049">Настройка кулера</a> (2020)
+            </li>
+          <li>
+              <span class="group-label">Форум</span>
+              <a href="/forum/job/8816158">MySQL DBA for a cool Silicon Valley Start-UP</a> (2013)
+            </li>
+          </ul>
+      </div>
+  </section>
+</main>
+<footer id="ft">
+
+<p id="ft-info">
+  <a href="/about">О Сервере</a> -
+  <a href="/help/rules.md">Правила форума</a>
+
+  
+    - <a href="/help/markdown.md">Разметка Markdown</a>
+  <br>
+  <a href="https://github.com/maxcom/lorsource/issues">Сообщить об ошибке</a><br>
+  <a href="https://www.linux.org.ru/">https://www.linux.org.ru/</a>
+</p>
+
+<script type="text/javascript">
+  </script>
+
+<div id="theme-indicator">
+  <span class="theme-indicator-dark" title="Темная тема"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></span>
+  <span class="theme-indicator-light" title="Светлая тема"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg></span>
+  <span class="theme-indicator-auto" title="Системная тема"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></span>
+</div>
+</footer>
+</body></html>
