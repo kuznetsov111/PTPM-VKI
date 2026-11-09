@@ -98,6 +98,29 @@ class TestParseHtml(unittest.TestCase):
 
         self.assertEqual([], posts)
 
+    def test_parse_html_skips_article_without_text_block(self):
+        html = (
+            '<article class="msg" id="comment-5">'
+            '<div class="sign">ivan</div>'
+            "</article>"
+        )
+
+        posts = self.parser.parse_html(html)
+
+        self.assertEqual([], posts)
+
+    def test_parse_html_skips_article_without_author_name(self):
+        html = (
+            '<article class="msg" id="comment-5">'
+            '<div class="msg-text">text</div>'
+            '<div class="sign"></div>'
+            "</article>"
+        )
+
+        posts = self.parser.parse_html(html)
+
+        self.assertEqual([], posts)
+
 class TestParsePage(unittest.TestCase):
     """parse_page(url): requests.get подменяем, в интернет не ходим."""
 
@@ -144,6 +167,17 @@ class TestParsePage(unittest.TestCase):
             with self.assertRaises(requests.HTTPError):
                 self.parser.parse_page(self.URL)
 
+
+    def test_parse_page_uses_custom_headers_if_given(self):
+        parser = ForumParser(headers={"User-Agent": "test-agent"})
+
+        with patch("src.parser.requests.get") as mock_get:
+            mock_get.return_value = self.make_response()
+
+            parser.parse_page(self.URL)
+
+        headers = mock_get.call_args.kwargs["headers"]
+        self.assertEqual("test-agent", headers["User-Agent"])
 
 class TestSaveToDb(unittest.TestCase):
     @classmethod
