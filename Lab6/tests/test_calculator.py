@@ -1,3 +1,4 @@
+import time
 import unittest
 from selenium import webdriver
 from pages.calculator_page import CalculatorPage
@@ -5,14 +6,15 @@ from pages.calculator_page import CalculatorPage
 
 class TestCalculator(unittest.TestCase):
     def setUp(self):
-        # Перед каждым тестом запускаем новый браузер и открываем калькулятор
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(5)
-        self.page = CalculatorPage(self.driver)
+        self.page = CalculatorPage(self.driver, delay=1)
         self.page.open()
 
     def tearDown(self):
-        # После каждого теста закрываем браузер
+        filename = self._testMethodName + ".png"
+        self.page.save_screenshot(filename)
+        time.sleep(1.5)
         self.driver.quit()
 
     def test_addition(self):
